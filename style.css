@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    color: hsla(0, 0%, 100%, 0.6);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(233, 47%, 7%);
+}
+
+#container {
+    border-radius: 10px 0 0 10px;
+    width: 50%;
+    background-color: hsl(244, 38%, 16%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: space-around;
+}
+
+figure {
+    border-radius: 0 10px 10px 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 90%;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+}
+
+figure::after {
+    width: 100%;
+    border-radius: 0 10px 10px 0;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(79 0 126 / 65%);
+}
+
+.card {
+    padding: 0 30px;
+    margin: 30px;
+    display: grid;
+    justify-content: space-evenly;
+}
+
+h1 {
+    color: hsla(0, 0%, 100%, 0.808);
+    font-size: 26px;
+    margin: 0;
+    padding: 0;
+}
+
+.card p {
+    line-height: 24px;
+    font-size: 14px;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat {
+    font-size: 20px;
+    font-weight: 700;
+    color: hsla(0, 0%, 100%, 0.808);
+}
+
+.stat__details {
+    font-size: 11px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+mark {
+    background-color: transparent;
+    color: hsla(277, 64%, 61%);
+}
+
+@media screen and (max-width: 440px) and (max-height: 910px) {
+    
+    #container {
+        border-radius: 10px 10px;
+        width: 80%;
+        background-color: hsl(244, 38%, 16%);
+        display: grid;
+        grid-template-columns: none;
+        align-content: stretch;
+        grid-template-rows: min-content;
+        text-align: center;
+        height: 85%;
+    }
+    
+    .card {
+        padding: 10px ;
+        margin: 20px;
+        display: grid;
+        justify-content: space-evenly;
+        grid-row: 2;
+    }
+    
+    .card p {
+        font-family: 'Lexend Deca', Helvetica, sans-serif;
+        line-height: 24px;
+        font-size: 14px;
+        margin: 0;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+
+    img {
+        border-radius: 10px 10px 0 0;
+    }
+    
+    figure::after {
+        border-radius: 10px 10px 0 0;
+    }
+    
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
